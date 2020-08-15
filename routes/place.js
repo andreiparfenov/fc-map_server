@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 
 //добавить место
 router.post('/', function(req, res) {
-  Place.create(req.body, function (err, place) {
+  Place.create(req.body.place, function (err, place) {
     if (err) return next(err);
     res.json(place);
   });
